@@ -5,7 +5,7 @@ angular.module('v9App')
        var fetchData = function () {
 
 
-           var url = "https://spreadsheets.google.com/feeds/list/1CEbHKEYOVoK85b0lpCvDDGu0heWyWV4nWylNN8iCmRE/0/public/values?alt=json-in-script&callback=googlSpre";
+           var url = "https://spreadsheets.google.com/feeds/list/1CEbHKEYOVoK85b0lpCvDDGu0heWyWV4nWylNN8iCmRE/1/public/values?alt=json-in-script&callback=googlSpre";
            var pa = [];
            var paPromise = $q.defer();
 
@@ -23,7 +23,11 @@ angular.module('v9App')
                    var obj = {};
                    obj.link = entry.gsx$link.$t;
                    obj.description = entry.gsx$description.$t;
+                   obj.category = entry.gsx$category.$t;
                    obj.name = entry.gsx$name.$t;
+                   obj.date = entry.gsx$date.$t;
+                   obj.momentDate = moment(obj.date, "DD/MM/YYYY");
+                   obj.unixDate = moment(obj.date, "DD/MM/YYYY").valueOf();
                    obj.tags = entry.gsx$tags.$t.split(",");
 
                    pa.push(obj);

@@ -12,9 +12,12 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
       <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+      <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
         <!-- build:css({.tmp,app}) styles/main.css -->
             <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+
+        <link rel="stylesheet" href="styles/animation.css">
 
 </head>
   <body ng-app="v9App">
@@ -28,7 +31,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+
+<!--<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="#">Home</a></li>
+    <li><a ng-href="#">About</a></li>
+    <li><a ng-href="#">Contact</a></li>
+  </ul>
+  <img src="images/logo.png"/>
+</div>-->
+<div class="container">
+  <img src="images/logo.png"/>
+</div>
+
+    <div ng-view="" class="main-view"></div>
+
+
+    <div class="footer container">
+      <p class="text-center">lo2k.net</p>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -42,13 +63,16 @@
     </script>
 
 
-    <script src="bower_components/angular/angular.js"></script>
+        
 
         <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->

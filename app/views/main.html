@@ -1,28 +1,32 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">v9</h3>
-</div>
 
 
-<div class="row marketing">
 
-  <div ng-repeat="project in projects">
+     <div class="container">
+  <div class="row">
+
+
+  <div  class="loader center-block text-muted" ng-if="loading">
+      <p class="text-center"><span class="fa fa-4x fa-circle-o-notch fa-spin"></span></p>
+      <p class="text-center">Loading from Google SpreadSheet backend...</p>
+  </div>
+  <div ng-repeat="project in projects | orderBy: 'unixDate': true" class="timeline-elt">
+      <div class="icon" ng-style="getStyleForCategory(project.category)"><i class="fa fa-lg" ng-class="getIconForCategory(project.category)"></i></div>
+      <div class="date">{{project.momentDate.format('MM/YYYY')}}<br/>
+                        <span class="text-muted small">{{project.momentDate.fromNow()}}</span></div>
+      <div class="content">
+
       <h1><a href="{{project.link}}">{{project.name}}</a></h1>
-      <p>{{project.description}}</p>
+      <p class="adaptive-text">{{project.description}}</p>
       <p>
-          <span ng-repeat="tag in project.tags" class="label label-default">
+          <span ng-repeat="tag in project.tags">
+                <span class="label label-default" style="margin-right: 0.2em">
                {{tag}}
+               </span>
           </span>
       </p>
-
-      {{project.tags}}
+      </div>
   </div>
 
 </div>
-<div class="footer">
-  <p>lo2k.net</p>
-</div>
+
+     </div>
