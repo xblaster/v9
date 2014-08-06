@@ -9,23 +9,42 @@
       <p class="text-center"><span class="fa fa-4x fa-circle-o-notch fa-spin"></span></p>
       <p class="text-center">Loading from Google SpreadSheet backend...</p>
   </div>
-  <div ng-repeat="project in projects | orderBy: 'unixDate': true" class="timeline-elt">
-      <div class="icon" ng-style="getStyleForCategory(project.category)"><i class="fa fa-lg" ng-class="getIconForCategory(project.category)"></i></div>
-      <div class="date">{{project.momentDate.format('MM/YYYY')}}<br/>
-                        <span class="text-muted small">{{project.momentDate.fromNow()}}</span></div>
-      <div class="content">
+  <ul class="list">
+  <li ng-repeat="project in projects | orderBy: 'unixDate': true" class="list-item">
+      <!--<div class="icon" ng-style="getStyleForCategory(project.category)">-->
 
-      <h1><a href="{{project.link}}">{{project.name}}</a></h1>
-      <p class="adaptive-text">{{project.description}}</p>
-      <p>
-          <span ng-repeat="tag in project.tags">
-                <span class="label label-default" style="margin-right: 0.2em">
-               {{tag}}
-               </span>
-          </span>
-      </p>
+     
+      <div class="block">
+
+        <img class="thumb" src="images/thumb/{{project.name}}.jpg" style="width: 100%">
+
+        <div class="content">
+        <h1><a href="{{project.link}}">{{project.name}}</a></h1>
+
+        <div class="icon">
+            <i class="fa fa-lg" ng-class="getIconForCategory(project.category)"></i>
+
+
+            <div class="date">{{project.momentDate.format('MM/YYYY')}}<br/>
+                          <span class="text-muted small">{{project.momentDate.fromNow()}}</span>
+        </div>
+
+        </div>
+        
+        
+
+          <p class="">{{project.description}}</p>
+          <div class="tags">
+              <span ng-repeat="tag in project.tags">
+                    <span class="label label-default" style="margin-right: 0.2em">
+                   {{tag}}
+                   </span>
+              </span>
+          </div>
       </div>
-  </div>
+      </div>
+  </li>
+  </ul>
 
 </div>
 

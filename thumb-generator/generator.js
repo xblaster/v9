@@ -8,6 +8,8 @@ var request = require('request');
 
 var url = "https://spreadsheets.google.com/feeds/list/1CEbHKEYOVoK85b0lpCvDDGu0heWyWV4nWylNN8iCmRE/1/public/values?alt=json";
 
+console.log("test request");
+
 request(url, function (error, response, body) {
 	//console.log(response);
 	console.log(body);

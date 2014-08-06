@@ -36,7 +36,7 @@ var page = require('webpage').create(),
             window.setTimeout(function () {
                 page.render(output);
                 phantom.exit();
-            }, 200);
+            }, 2000);
         }
     });
 //}

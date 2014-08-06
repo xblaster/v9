@@ -40,6 +40,8 @@ angular.module('v9App')
            $scope.projects = data;
            $scope.loading = false;
 
+           $("body").addClass("loaded");
+
 
           // setTimeout(  $scope.bindEffects, 200);
             
