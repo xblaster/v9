@@ -1,0 +1,86 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'webpage' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 warn package.json v9@0.0.0 No description
+5 warn package.json v9@0.0.0 No repository field.
+6 warn package.json v9@0.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'webpage', null ]
+9 verbose cache add name=undefined spec="webpage" args=["webpage",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'webpage',
+10 verbose parsed url   path: 'webpage',
+10 verbose parsed url   href: 'webpage' }
+11 silly lockFile c3c0e61b-webpage webpage
+12 verbose lock webpage /home/jerome/.npm/c3c0e61b-webpage.lock
+13 silly lockFile c3c0e61b-webpage webpage
+14 silly lockFile c3c0e61b-webpage webpage
+15 verbose addNamed [ 'webpage', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile 92ce8f44-webpage webpage@
+18 verbose lock webpage@ /home/jerome/.npm/92ce8f44-webpage.lock
+19 silly addNameRange { name: 'webpage', range: '*', hasData: false }
+20 verbose url raw webpage
+21 verbose url resolving [ 'http://registry.npmjs.org/', './webpage' ]
+22 verbose url resolved http://registry.npmjs.org/webpage
+23 info trying registry request attempt 1 at 15:02:06
+24 http GET http://registry.npmjs.org/webpage
+25 http 404 http://registry.npmjs.org/webpage
+26 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 verbose headers   'content-type': 'application/json',
+26 verbose headers   'cache-control': 'max-age=0',
+26 verbose headers   'content-length': '52',
+26 verbose headers   'accept-ranges': 'bytes',
+26 verbose headers   date: 'Tue, 05 Aug 2014 13:02:07 GMT',
+26 verbose headers   via: '1.1 varnish',
+26 verbose headers   age: '0',
+26 verbose headers   connection: 'keep-alive',
+26 verbose headers   'x-served-by': 'cache-fra1224-FRA',
+26 verbose headers   'x-cache': 'MISS',
+26 verbose headers   'x-cache-hits': '0',
+26 verbose headers   'x-timer': 'S1407243726.372680,VS0,VE737',
+26 verbose headers   'proxy-connection': 'keep-alive' }
+27 silly registry.get cb [ 404,
+27 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=0',
+27 silly registry.get     'content-length': '52',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Tue, 05 Aug 2014 13:02:07 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-fra1224-FRA',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1407243726.372680,VS0,VE737',
+27 silly registry.get     'proxy-connection': 'keep-alive' } ]
+28 silly lockFile 92ce8f44-webpage webpage@
+29 silly lockFile 92ce8f44-webpage webpage@
+30 error 404 404 Not Found: webpage
+30 error 404
+30 error 404 'webpage' is not in the npm registry.
+30 error 404 You should bug the author to publish it
+30 error 404 It was specified as a dependency of 'v9'
+30 error 404
+30 error 404 Note that you can also install from a
+30 error 404 tarball, folder, or http url, or git url.
+31 error System Linux 3.11.0-23-generic
+32 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "webpage"
+33 error cwd /home/jerome/sync/git/v9/thumb-generator
+34 error node -v v0.10.28
+35 error npm -v 1.4.9
+36 error code E404
+37 verbose exit [ 1, true ]
