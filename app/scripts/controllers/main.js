@@ -4,6 +4,11 @@ angular.module('v9App')
   .controller('MainCtrl', function ($scope, GooglSpreadsheet) {
 
 
+
+      $scope.goto = function(project) {
+        window.location = project.link;
+      }
+
   	   $scope.getStyleForCategory = function(category) {
   	   		if (category == "labs") {
             return {'background-color' : "#61AE24"}
@@ -37,10 +42,12 @@ angular.module('v9App')
        $scope.loading = true;
 
        GooglSpreadsheet.get().then(function(data) {
+          $("body").addClass("loaded");
+          $("body").height();
            $scope.projects = data;
            $scope.loading = false;
 
-           $("body").addClass("loaded");
+           
 
 
           // setTimeout(  $scope.bindEffects, 200);

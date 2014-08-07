@@ -1,15 +1,47 @@
 
+.my-animation.ng-enter {
+  /* standard transition code */
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity:0;
+   -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both;
+}
+.my-animation.ng-enter-stagger {
+  /* this will have a 100ms delay between each successive leave animation */
+  -webkit-animation-delay: 0.2s;
+  -webkit-transition-delay: 0.2s;
+  animation-delay: 0.2s;  
+  transition-delay: 0.2s;
+
+  /* in case the stagger doesn't work then these two values
+   must be set to 0 to avoid an accidental CSS inheritance */
+  -webkit-animation-duration: 0s;
+  animation-duration: 0s;
+}
+.my-animation.ng-enter.ng-enter-active {
+  /* standard transition styles */
+  opacity:1;
+}
+
 .animation-target {
   -webkit-animation: animation 1000ms linear both;
   animation: animation 1000ms linear both;
 }
 
-.timeline-elt:hover .date, .loader {
+.list-item.bounce, .bounce {
+ -webkit-animation: animation 1000ms linear both;
+  animation: animation 1000ms linear both; 
+  /*background-color: red !important;*/
+  /*font-size: 4em;*/
+}
+
+.long-bounce {
  -webkit-animation: animation 1500ms linear both;
   animation: animation 1500ms linear both; 
   /*background-color: red !important;*/
   /*font-size: 4em;*/
-}eere
+}
 
 /* Generated with Bounce.js. Edit at http://goo.gl/Vn2Euz */
 

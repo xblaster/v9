@@ -1,32 +1,59 @@
 
+<!--<div class="jumbotron bounce">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-2  col-xs-4 avatar">
+          <img src="http://www.gravatar.com/avatar/64953a0420a8f139aa2d4c61a9df70d0?size=150" class="img-circle img-responsive" alt="Photo de Jérôme Wax">
+        </div>
+        <div class="col-sm-10 col-xs-8">
+            <p class="adaptive-text">
+            I'm a passionate Technical Expert in front-end development and UX (user experience) with a master degree in HCI (Human and Computer Interaction)
+            </p>
 
+            <p class="adaptive-text">      
+            I have also several skills in Artificial Intelligence, UNIX administration, design and cards magic tricks ;)
+            </p>
+        </div>
+      </div>
+  </div>
+</div>-->
+
+<div class="big-head">
+
+  <h1>Projects</h1>
+</div>
 
      <div class="container">
+
+
   <div class="row">
 
 
-  <div  class="loader center-block text-muted" ng-if="loading">
+ <!-- <div  class="loader center-block text-muted long-bounce jumbotron" ng-if="loading">
       <p class="text-center"><span class="fa fa-4x fa-circle-o-notch fa-spin"></span></p>
       <p class="text-center">Loading from Google SpreadSheet backend...</p>
-  </div>
+  </div>-->
   <ul class="list">
-  <li ng-repeat="project in projects | orderBy: 'unixDate': true" class="list-item">
+  <li ng-repeat="project in projects | orderBy: 'unixDate': true" class="list-item my-animation">
       <!--<div class="icon" ng-style="getStyleForCategory(project.category)">-->
 
      
-      <div class="block">
+      <div class="block" ng-click="goto(project)">
 
-        <img class="thumb" src="images/thumb/{{project.name}}.jpg" style="width: 100%">
+        <div class="thumb">
+            <img class="thumb" src="images/thumb/{{project.name}}.jpg" style="width: 100%">
+        </div>
 
         <div class="content">
         <h1><a href="{{project.link}}">{{project.name}}</a></h1>
-
-        <div class="icon">
-            <i class="fa fa-lg" ng-class="getIconForCategory(project.category)"></i>
-
-
-            <div class="date">{{project.momentDate.format('MM/YYYY')}}<br/>
+        <div class="date">{{project.momentDate.format('MM/YYYY')}}<br/>
                           <span class="text-muted small">{{project.momentDate.fromNow()}}</span>
+
+        <div class="icon" ng-style="getStyleForCategory(project.category)">
+            <i class="fa fa-lg"  ng-class="getIconForCategory(project.category)"></i>
+
+
+           
         </div>
 
         </div>

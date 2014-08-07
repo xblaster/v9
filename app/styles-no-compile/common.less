@@ -67,21 +67,21 @@
  * Adaptive part
  */
 
-.adaptive-text {
+html body .adaptive-text {
   margin-bottom: @line-height-computed;
-  font-size: (@font-size-base * 1.15);
+  font-size: (@font-size-base * 1.15) !important;
   line-height: 1.4;
 
   @media (min-width: @screen-sm) and (max-width: @screen-md) {
-    font-size: (@font-size-base * 1.5);
+    font-size: (@font-size-base * 1.5) !important;
   }
 
   @media (min-width: @screen-md) {
-    font-size: (@font-size-base * 1.75);
+    font-size: (@font-size-base * 1.75) !important;
   }
 
   @media (max-width: @screen-xs) {
-    font-size: (@font-size-base * 1);
+    font-size: (@font-size-base * 1) !important;
   }
 }
 
