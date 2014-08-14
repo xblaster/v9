@@ -26,6 +26,8 @@ angular.module('v9App')
                    obj.category = entry.gsx$category.$t;
                    obj.name = entry.gsx$name.$t;
                    obj.date = entry.gsx$date.$t;
+
+                   obj.screenshot = entry.gsx$screenshot.$t;
                    obj.momentDate = moment(obj.date, "DD/MM/YYYY");
                    obj.unixDate = moment(obj.date, "DD/MM/YYYY").valueOf();
                    obj.tags = entry.gsx$tags.$t.split(",");

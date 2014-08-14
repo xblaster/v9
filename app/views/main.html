@@ -1,13 +1,14 @@
 
-<!--<div class="jumbotron bounce">
+<div class="bounce" style="margin-top: 3em">
   <div class="container">
       <div class="row">
         <div class="col-sm-2  col-xs-4 avatar">
+          <img src="images/logo.png" class="img-responsive"/><hr/>
           <img src="http://www.gravatar.com/avatar/64953a0420a8f139aa2d4c61a9df70d0?size=150" class="img-circle img-responsive" alt="Photo de Jérôme Wax">
         </div>
         <div class="col-sm-10 col-xs-8">
             <p class="adaptive-text">
-            I'm a passionate Technical Expert in front-end development and UX (user experience) with a master degree in HCI (Human and Computer Interaction)
+            Hello I'm Jérôme WAX and I'm a passionate Technical Expert in front-end development and UX (user experience) with a master degree in HCI (Human and Computer Interaction)
             </p>
 
             <p class="adaptive-text">      
@@ -16,23 +17,25 @@
         </div>
       </div>
   </div>
-</div>-->
+</div>
+
+<br/>
 
 <div class="big-head">
 
   <h1>Projects</h1>
 </div>
 
-     <div class="container">
+     <div class="container" style="min-height: 25em">
 
 
   <div class="row">
 
 
- <!-- <div  class="loader center-block text-muted long-bounce jumbotron" ng-if="loading">
+ <div  class="loader center-block text-muted long-bounce jumbotron" ng-if="loading">
       <p class="text-center"><span class="fa fa-4x fa-circle-o-notch fa-spin"></span></p>
       <p class="text-center">Loading from Google SpreadSheet backend...</p>
-  </div>-->
+  </div>
   <ul class="list">
   <li ng-repeat="project in projects | orderBy: 'unixDate': true" class="list-item my-animation">
       <!--<div class="icon" ng-style="getStyleForCategory(project.category)">-->
@@ -41,10 +44,13 @@
       <div class="block" ng-click="goto(project)">
 
         <div class="thumb">
-            <img class="thumb" src="images/thumb/{{project.name}}.jpg" style="width: 100%">
+
+            <img ng-show="project.screenshot == 'TRUE'" class="thumb" src="images/thumb/{{project.name}}.jpg" style="width: 100%">
+            <img ng-show="project.screenshot == 'FALSE'" class="thumb" src="images/transparent-thumb.gif" style="width: 100%">
         </div>
 
         <div class="content">
+        {{project.screenshot}}
         <h1><a href="{{project.link}}">{{project.name}}</a></h1>
         <div class="date">{{project.momentDate.format('MM/YYYY')}}<br/>
                           <span class="text-muted small">{{project.momentDate.fromNow()}}</span>
@@ -76,3 +82,46 @@
 </div>
 
      </div>
+
+
+
+
+  <div class="container-fluid hatched">
+      <div class="row">
+
+
+    <!--  <div class="col-sm-6">
+
+        <h2>Social links</h2>
+        <ul>
+          <li><a href="http://www.facebook.com/xblaster">Facebook
+              page</a></li>
+          <li><a href="http://twitter.com/xblaster">Follow me on
+              twitter</a></li>
+          <li><a href="http://fr.linkedin.com/pub/j%C3%A9r%C3%B4me-wax/4/369/7a0">LinkedIn
+              profile</a></li>
+        </ul>
+      </div>
+
+      <div id="contactDiv" class="col-sm-6">
+
+        <h2 id="contact" style="color: #D9FB19">Contact</h2>
+
+        <div class="avatar">
+          <img src="http://www.gravatar.com/avatar/64953a0420a8f139aa2d4c61a9df70d0" alt="Photo de Jérôme Wax">
+        </div>
+
+        <ul>
+          <li>+33 (0)6 20 31 57 36</li>
+          <li>+33 (0)9 50 95 32 42</li>
+          <li><a href="mailto:nospam@lo2k.net">nospam@lo2k.net</a></li>
+        </ul>
+      </div>
+      </div>-->
+
+      <div class=" small center-block" style="text-align: center">
+        Copyright 2008-2014 <a href="http://www.lo2k.net">Lo2k.net</a>
+        Website by Jérôme Wax
+      </div>
+      
+    </div>
